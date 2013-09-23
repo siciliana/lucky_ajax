@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('form').submit(function(event) {
           event.preventDefault();
-          var url = $(this).attr(action');
+          var url = $(this).attr(action)
           var data = { value : Math.floor(Math.random() * 6 + 1 }
           $.post(url, data, function(response) {
             console.log(response); 
