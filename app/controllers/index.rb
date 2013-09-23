@@ -13,5 +13,9 @@ post '/rolls' do
 
   @roll = value ? Roll.create({ value: value }) : Roll.create
 
-  erb :_die, :layout => false  # HINT: what does this do? what should we do instead?
+  if request.xhr?
+  	erb :_die_roll, layout: false
+  else
+  erb :_die   # HINT: what does this do? what should we do instead?
+end 
 end
